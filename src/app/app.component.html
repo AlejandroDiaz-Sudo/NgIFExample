@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <app-crud1 *ngIf="(status2)"></app-crud1>
+  <app-bod *ngIf="(status2)"></app-bod>
+  
+<div class="abs-center">
+  
+    <form *ngIf="statuslogueo">
+      <h1 class="botones">{{title}}</h1>    
+        <div>
+          
+          <label for="User"></label>
+          <input placeholder="Email"type="email">
+        </div>
+        <br>
+        <div>
+          <label for="Password"></label>
+          <input placeholder="Password"type="password">
+        </div>
+        <br>          
+    </form>
+  </div>
+  <div class="botones">
+    <button *ngIf="(nologin)" (click)="ontoogle()" (click)="loginWhithGoogle()">Login con Google</button>
+
+    <!-- Prueba CONDICIONALES -->
+    <button *ngIf="(nologin)" (click)="lcase()" >lcase</button>
+
+    <!-- Prueba CONDICIONALES -->
+
+    <button *ngIf="(status2)" (click)="btnsalida()" >Salir</button> 
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
